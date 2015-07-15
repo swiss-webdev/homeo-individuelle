@@ -1,0 +1,53 @@
+doctype 
+html(lang="en")
+  head
+  title Intériorité
+  meta(name="author", content="Mathias Gilson")
+  meta(name="description", content="Massage Rolfing Spa Emilie Bolis")
+  meta(name="keywords", content="Massage,Rolfing,Spa,Emilie,bolis")
+  link(rel="stylesheet", href='/css/style.css' , media="screen")
+  //link(rel="stylesheet", href='/css/jquery.mobile.min.css' , media="screen")
+  
+  
+
+body
+ include nav 
+ .container
+    include top
+    include massage
+    include rolfing
+    include infos
+
+script(type='text/javascript', src='/js/jquery.min.js')
+script(id='mobile' type='text/javascript', src='/js/stellar.min.js')
+script.
+    $(window).stellar({
+    responsive: true,
+    parallaxBackgrounds: false,
+    parallaxElements: true,
+    hideDistantElements: false
+    });
+      // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function (event) {
+    var that = $(this);
+
+    that.on('click', onMapClickHandler);
+    that.off('mouseleave', onMapMouseleaveHandler);
+    that.find('iframe').css("pointer-events", "none");
+    }
+
+    var onMapClickHandler = function (event) {
+    var that = $(this);
+
+    // Disable the click handler until the user leaves the map area
+    that.off('click', onMapClickHandler);
+
+    // Enable scrolling zoom
+    that.find('iframe').css("pointer-events", "auto");
+
+    // Handle the mouse leave event
+    that.on('mouseleave', onMapMouseleaveHandler);
+    }
+
+    // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
