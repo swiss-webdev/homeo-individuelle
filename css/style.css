@@ -1,6 +1,19 @@
 @font-face {
     font-family: 'round-font';
-    src: url(/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.ttf);
+    src: url('/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.eot');
+    /* IE9 Compat Modes */
+    
+    src: url('/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    
+    url('/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    
+    url('/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    
+    url('/fonts/ProximaNovaSoft-Regular/ProximaNovaSoft-Regular-webfont.svg#svgFontName') format('svg');
+    /* Legacy iOS */
 }
 
 html {
@@ -46,11 +59,12 @@ a {
 
 .nav a {
     color: rgb(255, 255, 255);
-    vertical-align: -webkit-baseline-middle;
+    vertical-align: sub;
+    line-height: 30px;
 }
 
 .nav {
-    display: -webkit-inline-box;
+    display: flex;
     list-style: none;
     width: 100%;
     position: fixed;
@@ -61,11 +75,10 @@ a {
 }
 
 .menu {
-    display: -webkit-inline-box;
+    display: flex;
     float: right;
     right: 80px;
     position: absolute;
-    height: 100%;
 }
 
 .nav li {
@@ -103,7 +116,6 @@ section > p {
 }
 
 .items {
-    display: -webkit-inline-box;
     margin-top: 45px;
 }
 
@@ -115,9 +127,9 @@ section > p {
 }
 
 img {
-    width: 100%;
+    width: auto;
     position: absolute;
-    height: auto;
+    height: 100%;
 }
 
 .image-top {
@@ -130,6 +142,8 @@ img {
 .map {
     height: 50%;
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .map > iframe {
@@ -140,11 +154,12 @@ img {
     background-color: #C9E12F;
     width: 200px;
     height: 200px;
-    margin-right: 20px;
+    margin: 10px;
     list-style: none;
     text-align: center;
     font-size: 43px;
     color: #fff;
+    float: left;
 }
 
 .items li > p {
@@ -166,14 +181,13 @@ img {
     height: 60px;
     margin-right: 20px;
     font-size: 30px;
-    margin-top: 120px;
+    margin-top: 130px;
     text-align: left;
     padding: 10px;
     line-height: 30px;
 }
 
 .infos {
-    display: -webkit-inline-box;
     margin-top: 45px;
     margin-left: auto;
     margin-right: auto;
@@ -188,6 +202,7 @@ img {
     margin-right: 40px;
     list-style: none;
     text-align: center;
+    float: left;
 }
 
 .infos li > img {
@@ -202,10 +217,25 @@ img {
     margin-top: 30px;
 }
 
-@media only screen and (min-device-width: 175px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 780px) {
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .title {
+        display: none;
+    }
+    .subTitle {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 175px) and (max-device-width: 670px) and (-webkit-min-device-pixel-ratio: 2) {
     img {
         height: 100%;
-        position: absolute;
         width: auto;
     }
     .image-top > img {
