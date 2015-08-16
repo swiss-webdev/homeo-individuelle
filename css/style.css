@@ -65,6 +65,7 @@ a {
 
 .nav {
     display: flex;
+    display: -webkit-flex;
     list-style: none;
     width: 100%;
     position: fixed;
@@ -76,6 +77,7 @@ a {
 
 .menu {
     display: flex;
+    display: -webkit-flex;
     float: right;
     flex-direction: row;
     right: 80px;
@@ -163,6 +165,7 @@ img {
     justify-content: space-between;
     float: left;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
 }
 
@@ -184,9 +187,11 @@ a.tel {
 .assurance {
     width: 100%;
     display: flex;
+    display: -webkit-flex;
     font-size: 19px;
     padding-left: 10px;
     flex-direction: column;
+    -webkitflex-direction: column;
 }
 
 li.formation {
@@ -207,7 +212,7 @@ li.formation {
 
 .infos {
     margin-top: 70px;
-    margin-bottom: 300px;
+    margin-bottom: 50%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
