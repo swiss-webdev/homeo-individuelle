@@ -163,10 +163,12 @@ img {
     font-size: 50px;
     color: #fff;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     float: left;
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .items li > p {
