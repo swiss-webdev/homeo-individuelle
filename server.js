@@ -32,8 +32,8 @@ app
 
 
 .get('/', function (req, res) {
-    //res.render('home');
-    res.render('comingSoon');
+    res.render('home');
+    //res.render('comingSoon');
 });
 
 
