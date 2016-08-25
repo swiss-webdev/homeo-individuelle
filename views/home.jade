@@ -6,7 +6,6 @@ html(lang="en")
   meta(name="description", content="Massage Rolfing Spa Emilie Bolis")
   meta(name="keywords", content="Massage,Rolfing,Spa,Emilie,bolis")
   link(rel="stylesheet", href='/css/style.css' , media="screen")
-  //link(rel="stylesheet", href='/css/jquery.mobile.min.css' , media="screen")
   
   
 
@@ -18,36 +17,13 @@ body
     include rolfing
     include infos
 
-script(type='text/javascript', src='/js/jquery.min.js')
-script(id='mobile' type='text/javascript', src='/js/stellar.min.js')
-script(src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js")
+script(src="/js/jquery.min.js")
+script(src="/js/parallax.min.js")
 
 script.
 
-    function detectmob() { 
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-    return true;
-    }
-    else {
-    return false;
-    }
-    }
-    
-    if(!detectmob()){
-    $(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: false,
-    parallaxElements: true,
-    hideDistantElements: true
-    });
-    }
+    jQuery(window).trigger('resize').trigger('scroll');
+
     
       // Disable scroll zooming and bind back the click event
     var onMapMouseleaveHandler = function (event) {

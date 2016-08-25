@@ -15,8 +15,7 @@
         "serve-favicon": "*",
         "path": "*",
         "method-override": "*",
-        "body-parser": "*",
-        "multer": "*"
+        "body-parser": "*"
     },
     "devDependencies": {},
     "bundleDependencies": [],
