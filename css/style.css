@@ -57,6 +57,24 @@ a {
     color: #fff;
 }
 
+.links {
+    margin-top: 30px;
+}
+
+.link {
+    color: #b5d200;
+    font-size: 18px;
+}
+.rolfing-image {
+    height: 140px;
+    margin-top: 20px;
+}
+
+.rolfing-image > img {
+    width: 80px;
+    height: auto;
+}
+
 .nav a {
     color: rgb(255, 255, 255);
     vertical-align: sub;

@@ -11,7 +11,7 @@ var app = express();
 
 app
     .set('port', process.env.OPENSHIFT_NODEJS_PORT || 8081)
-    .set('ip', process.env.OPENSHIFT_NODEJS_IP || '192.168.0.31')
+    .set('ip', process.env.OPENSHIFT_NODEJS_IP || '192.168.0.52')
     .use(express.static(__dirname))
     .set('view engine', 'jade')
     .set('views', path.join(__dirname, 'views'))
