@@ -10,8 +10,8 @@ var bodyParser = require('body-parser');
 var app = express();
 
 app
-    .set('port', process.env.OPENSHIFT_NODEJS_PORT || 8081)
-    .set('ip', process.env.OPENSHIFT_NODEJS_IP || '192.168.0.52')
+    .set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080)
+    .set('ip', process.env.OPENSHIFT_NODEJS_IP || 'localhost')
     .use(express.static(__dirname))
     .set('view engine', 'jade')
     .set('views', path.join(__dirname, 'views'))
