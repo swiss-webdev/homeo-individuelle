@@ -1,23 +1,19 @@
 doctype 
 html(lang="en")
   head
-  title Intériorité
-  meta(name="author", content="Mathias Gilson")
-  meta(name="description", content="Massage Rolfing Spa Emilie Bolis Germanier")
-  meta(name="keywords", content="Massage,Rolfing,Spa,Emilie,bolis")
-  link(rel="stylesheet", href='/css/style.css' , media="screen")
+  title INDIVIDU’elle
+  meta(name="description", content="Magaly Stauffer homéopathie et yoga")
+  meta(name="keywords", content="Magaly Stauffer")
+  link(rel="stylesheet", href='css/style.css' , media="screen")
   
 
 body
  include nav 
  .container
-    include top
-    include massage
-    include rolfing
-    include infos
+    block content
 
-script(src="/js/jquery.min.js")
-script(src="/js/parallax.min.js")
+script(src="js/jquery.min.js")
+script(src="js/parallax.min.js")
 
 script.
 

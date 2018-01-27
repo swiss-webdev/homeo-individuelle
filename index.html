@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head></head><title>INDIVIDU’elle</title><meta name="description" content="Magaly Stauffer homéopathie et yoga"><meta name="keywords" content="Magaly Stauffer"><link rel="stylesheet" href="css/style.css" media="screen"></html><body><div class="nav"><a href="/" data-ajax="false"><div class="title">INDIVIDU’elle</div><div class="subTitle">homéopathie et yoga</div></a><div class="menu"><li><a href="homeopathie.html" data-ajax="false">Homéopathie </a></li><li><a href="metakinebiologie.html" data-ajax="false">Métakinébiologie  </a></li><li><a href="yoga.html" data-ajax="false">Yoga</a></li><li><a href="index.html#infos" data-ajax="false">Infos</a></li></div><div class="copyright">INDIVIDU’elle © 2017</div></div><div class="container"><div class="image-top"><div class="parallax-window header" data-parallax="scroll" data-image-src="img/photos/home.jpg" data-natural-height="476" data-natural-width="695" data-over-scroll-fix="true"></div></div><div class="parallax-text" style="margin-bottom: 20px"><div class="parallax-citation">"La maladie est l'effort que fait la nature pour guérir l'homme."</div><div class="parallax-author">C.G. Jung</div></div><section><h1>INDIVIDU’elle</h1><p>Sage femme diplômée en 1989, puis humanitaire pendant plusieurs année en Asie et en Afrique, j’ai finalement posé mes valises pour devenir maman.</p><p>L’être humain m’a toujours fasciné et c’est dans l’homéopathie que j’ai trouvé cette vision qui individualise l’être. Pour ajouter une touche de compréhension a ce qui anime notre être j'ai trouvé dans la métakinébiologie un outil simple et efficace.</p></section><div class="map"><iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.6745501743667!2d6.860394615542886!3d46.96808403985981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478de0ff88559a97%3A0x19cbe2e32e136ba4!2sChemin+des+Battieux+1%2C+2013+Milvignes!5e0!3m2!1sfr!2sch!4v1508239919141"></iframe></div><div><div class="info" id="infos"><div class="name"><div class="text">Magaly Stauffer</div><a href="mailto:magaly.stauffer@hotmail.com">magaly.stauffer@hotmail.com</a></div><div class="infos"><li><img src="img/icons/phone.png"><p> <a class="tel" href="tel:0765153424">076 515 34 24</a></p></li><li><img src="img/icons/time.png"><p>Sur rendez-vous uniquement</p></li><li><img src="img/icons/location.png"><p>Battieux 1 2013 colombier</p></li></div></div></div></div></body><script src="js/jquery.min.js"></script><script src="js/parallax.min.js"></script><script>jQuery(window).trigger('resize').trigger('scroll');
+
+
+  // Disable scroll zooming and bind back the click event
+var onMapMouseleaveHandler = function (event) {
+var that = $(this);
+
+that.on('click', onMapClickHandler);
+that.off('mouseleave', onMapMouseleaveHandler);
+that.find('iframe').css("pointer-events", "none");
+}
+
+var onMapClickHandler = function (event) {
+var that = $(this);
+
+// Disable the click handler until the user leaves the map area
+that.off('click', onMapClickHandler);
+
+// Enable scrolling zoom
+that.find('iframe').css("pointer-events", "auto");
+
+// Handle the mouse leave event
+that.on('mouseleave', onMapMouseleaveHandler);
+}
+
+// Enable map zooming with mouse scroll when the user clicks the map
+$('.map').on('click', onMapClickHandler);</script>

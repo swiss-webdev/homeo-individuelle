@@ -21,5 +21,9 @@
     "bundleDependencies": [],
 
     "private": true,
-    "main": "server.js"
+    "main": "server.js",
+
+    "scripts": {
+        "build": "pug ./views/{index,yoga,metakinebiologie,homeopathie}.pug --out ."
+    }
 }

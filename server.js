@@ -10,10 +10,10 @@ var bodyParser = require('body-parser');
 var app = express();
 
 app
-    .set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080)
-    .set('ip', process.env.OPENSHIFT_NODEJS_IP || 'localhost')
+    .set('port', 8080)
+    .set('ip', 'localhost')
     .use(express.static(__dirname))
-    .set('view engine', 'jade')
+    .set('view engine', 'pug')
     .set('views', path.join(__dirname, 'views'))
     .use(favicon(__dirname + '/img/favicon.png'))
     .use(methodOverride())
@@ -29,8 +29,20 @@ app
 
 
 .get('/', function (req, res) {
-    res.render('home');
-});
+    res.render('index');
+})
+
+.get('/yoga', function (req, res) {
+    res.render('yoga');
+})
+
+.get('/homeopathie', function (req, res) {
+    res.render('homeopathie');
+})
+
+.get('/metakinebiologie', function (req, res) {
+    res.render('metakinebiologie');
+})
 
 var server = http.createServer(app);
 server.listen(app.get('port'), app.get('ip'), function () {
